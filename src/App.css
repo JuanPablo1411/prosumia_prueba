@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Open Sans', sans-serif; 
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  
+.app-container {
+    display: flex;
+    height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .left-section {
+    flex: 0.3;
+    background-color: #F7444C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido al principio */
+    padding-top: 20px; /* Espacio en la parte superior para el logo */
   }
-  to {
-    transform: rotate(360deg);
+  
+  
+  .right-section {
+    flex: 2;
+    background-color: #ffffff; 
+    padding: 20px;
   }
+  
+  .logo {
+    width: 100%; /* Ajusta el logo al contenedor */
+    max-width: 200px; /* Máximo ancho del logo */
+    display: flex; /* Habilita flexbox para este contenedor */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0 auto; /* Margen automático para centrar dentro de la sección izquierda */
+  }
+  
+.logo-img {
+    max-width: 100%;  /* La imagen se ajustará al contenedor del logo */
+    height: auto;     /* Mantener la relación de aspecto */
+  }
+  
+  
+  .logo h2 {
+    margin: 0;
+    color: white;
+  }
+
+  .calculate-button {
+    background-color: #F7444C; 
+    border: none; 
+    color: white; 
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px; 
+    cursor: pointer;
+    
+  }
+
+  .calculate-button:hover {
+    background-color: #e55347; 
+  }
+  
+  .input-field {
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    width: calc(100% - 32px);
+    margin: 10px 0; 
+    box-sizing: border-box; 
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .logo-img {
+    max-width: 100%;  /* La imagen no será más grande que su contenedor */
+    height: auto;     /* Mantiene la relación de aspecto */
+    width: 100%;      /* Hace que la imagen sea flexible y se ajuste al contenedor */
+  }
