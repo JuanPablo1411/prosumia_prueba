@@ -5,6 +5,16 @@ function App() {
   const [heights, setHeights] = useState("");
   const [waterTrapped, setWaterTrapped] = useState(null);
 
+  const handleHeightChange = (event) => {
+    let value = event.target.value;
+    // Eliminar caracteres que no sean dígitos y espacios, y eliminar espacios adicionales
+    value = value.replace(/[^\d\s]/g, "").replace(/\s+/g, " ");
+    // Eliminar espacios al principio y al final
+    value = value.trimStart();
+    // Actualizar el valor de heights con la cadena de texto limpia
+    setHeights(value);
+  };
+
   const calculateWaterTrapped = () => {
     const heightsArray = heights.split(" ").map(Number);
     let left = 0,
@@ -56,7 +66,7 @@ function App() {
                 className="input-field"
                 type="text"
                 value={heights}
-                onChange={(e) => setHeights(e.target.value)} // Seteo la variable heights desde el input.
+                onChange={handleHeightChange} // Seteo la variable heights desde el input.
               />
             </label>
             <button
